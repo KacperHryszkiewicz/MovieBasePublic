@@ -93,13 +93,14 @@
 							}
 						},
 						"url": {
-							"raw": "localhost:8080/movie",
+							"raw": "localhost:8080/movie/c125c7b8-e788-47e0-b1ac-34bb5f1e6412",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"movie"
+								"movie",
+								"c125c7b8-e788-47e0-b1ac-34bb5f1e6412"
 							]
 						}
 					},
