@@ -6,379 +6,263 @@
 	},
 	"item": [
 		{
-			"name": "POST Movie Shrek",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Shrek\",\r\n    \"releaseYear\": 2001,\r\n    \"category\": \"COMEDY\",\r\n    \"description\": \"Przygody ogra z bagien\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST Movie to delete/edit",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Do usuniecia\",\r\n    \"releaseYear\": 2001,\r\n    \"category\": \"COMEDY\",\r\n    \"description\": \"Przygody ogra z bagien\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "PUT Edit movie",
-			"request": {
-				"method": "PUT",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Do usuniecia edytowany\",\r\n    \"releaseYear\": 2022,\r\n    \"category\": \"COMEDY\",\r\n    \"description\": \"Przygody ogra z bagien\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie/62bee61a-20b4-464b-8622-26aff4eef795",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"62bee61a-20b4-464b-8622-26aff4eef795"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete movie",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/movie/62bee61a-20b4-464b-8622-26aff4eef795",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"62bee61a-20b4-464b-8622-26aff4eef795"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST Movie Joker",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"title\": \"Joker\",\r\n    \"releaseYear\": 2019,\r\n    \"category\": \"THRILLER\",\r\n    \"description\": \"Historia Jokera\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST Award to Joker",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"name\" : \"Oscar\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie/edc62090-c93c-44c4-8d33-900d9b25a779/award",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"edc62090-c93c-44c4-8d33-900d9b25a779",
-						"award"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Delete Award",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/movie/edc62090-c93c-44c4-8d33-900d9b25a779/award/663b6e27-c705-48c4-ad77-b38ba2d8bf83",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"edc62090-c93c-44c4-8d33-900d9b25a779",
-						"award",
-						"663b6e27-c705-48c4-ad77-b38ba2d8bf83"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST Movie Rate to Shrek",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"rateValue\": 7,\r\n    \"author\" : \"Uzytkownik\",\r\n    \"comment\": \"Bardzo fajny film.\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie/c125c7b8-e788-47e0-b1ac-34bb5f1e6412/rate",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"c125c7b8-e788-47e0-b1ac-34bb5f1e6412",
-						"rate"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "POST Movie Rate to Shrek Copy",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"url": {
-					"raw": "localhost:8080/movie/c125c7b8-e788-47e0-b1ac-34bb5f1e6412/rate/204c961b-5ec4-46aa-8bdb-18635e3adfb4",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie",
-						"c125c7b8-e788-47e0-b1ac-34bb5f1e6412",
-						"rate",
-						"204c961b-5ec4-46aa-8bdb-18635e3adfb4"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET Movies",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "{\r\n    \"rateValue\": 10,\r\n    \"author\" : \"Uzytkownik2\",\r\n    \"comment\": \"Idealny film.\"\r\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET Movies with category",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie?category=COMEDY",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "COMEDY"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "GET Movies with phrase",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie?phrase=Ke",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "COMEDY",
-							"disabled": true
+			"name": "Movie",
+			"item": [
+				{
+					"name": "Create Movie",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Shrek\",\r\n    \"releaseYear\": 2001,\r\n    \"category\": \"COMEDY\",\r\n    \"description\": \"Przygody ogra z bagien\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "phrase",
-							"value": "Ke"
+						"url": {
+							"raw": "localhost:8080/movie",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "GET Movies",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie?category=THRILLER&phrase=Ke",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie"
+							],
+							"query": [
+								{
+									"key": "category",
+									"value": "THRILLER"
+								},
+								{
+									"key": "phrase",
+									"value": "Ke"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Movie By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rateValue\": 10,\r\n    \"author\" : \"Uzytkownik2\",\r\n    \"comment\": \"Idealny film.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit movie",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Do usuniecia edytowany\",\r\n    \"releaseYear\": 2022,\r\n    \"category\": \"COMEDY\",\r\n    \"description\": \"Przygody ogra z bagien\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie/62bee61a-20b4-464b-8622-26aff4eef795",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"62bee61a-20b4-464b-8622-26aff4eef795"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete movie",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/62bee61a-20b4-464b-8622-26aff4eef795",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"62bee61a-20b4-464b-8622-26aff4eef795"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		},
 		{
-			"name": "GET Movies with Category and phrase",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
-			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "localhost:8080/movie?category=THRILLER&phrase=Ke",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"movie"
-					],
-					"query": [
-						{
-							"key": "category",
-							"value": "THRILLER"
+			"name": "Award",
+			"item": [
+				{
+					"name": "Create Award",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\" : \"Oscar\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
 						},
-						{
-							"key": "phrase",
-							"value": "Ke"
+						"url": {
+							"raw": "localhost:8080/movie/edc62090-c93c-44c4-8d33-900d9b25a779/award",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"edc62090-c93c-44c4-8d33-900d9b25a779",
+								"award"
+							]
 						}
-					]
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Award",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/edc62090-c93c-44c4-8d33-900d9b25a779/award/663b6e27-c705-48c4-ad77-b38ba2d8bf83",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"edc62090-c93c-44c4-8d33-900d9b25a779",
+								"award",
+								"663b6e27-c705-48c4-ad77-b38ba2d8bf83"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
+		},
+		{
+			"name": "Rate",
+			"item": [
+				{
+					"name": "Create Rate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"rateValue\": 7,\r\n    \"author\" : \"Uzytkownik\",\r\n    \"comment\": \"Bardzo fajny film.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/movie/c125c7b8-e788-47e0-b1ac-34bb5f1e6412/rate",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"c125c7b8-e788-47e0-b1ac-34bb5f1e6412",
+								"rate"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Rate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/movie/c125c7b8-e788-47e0-b1ac-34bb5f1e6412/rate/204c961b-5ec4-46aa-8bdb-18635e3adfb4",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"movie",
+								"c125c7b8-e788-47e0-b1ac-34bb5f1e6412",
+								"rate",
+								"204c961b-5ec4-46aa-8bdb-18635e3adfb4"
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
